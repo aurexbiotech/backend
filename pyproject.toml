@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aurex-hms-backend"
+version = "0.1.0"
+description = "AUREX Hospital Management System Backend API"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "uvicorn[standard]>=0.30,<1",
+    "sqlalchemy>=2.0,<3",
+    "pymysql>=1.1,<2",
+    "pydantic-settings>=2.5,<3",
+    "pwdlib[argon2]>=0.2,<1",
+    "email-validator>=2.2,<3",
+    "python-multipart>=0.0.9,<1",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8,<9",
+    "httpx>=0.27,<1",
+]
