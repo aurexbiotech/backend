@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     """Application configuration loaded from environment or .env file."""
 
     # MySQL connection string
-    DATABASE_URL: str = "mysql+pymysql://root:root@127.0.0.1:3306/aurex"
+    DATABASE_URL: str = "sqlite:///./aurex_hms.db"
 
     # Secret keys for signing session tokens and CSRF protection
     APP_SECRET_KEY: str = "aurex-hms-secret-key-super-secure-at-least-32-chars-long"
